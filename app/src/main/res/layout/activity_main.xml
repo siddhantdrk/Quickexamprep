@@ -34,7 +34,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_baseline_menu_24" />
+                android:src="@drawable/ic_baseline_menu_24"
+                app:tint="@color/white" />
 
             <ImageView
                 android:id="@+id/iv_toolbar_logo"
@@ -44,6 +45,7 @@
                 android:layout_marginTop="@dimen/dp_10"
                 android:layout_marginBottom="@dimen/dp_10"
                 android:layout_marginLeft="@dimen/dp_40"
+                android:scaleType="centerCrop"
                 android:layout_toEndOf="@+id/iv_drawer_menu"
                 android:layout_toRightOf="@+id/iv_drawer_menu"
                 android:src="@mipmap/ic_launcher" />
@@ -51,6 +53,7 @@
             <ImageView
                 android:id="@+id/iv_search"
                 android:layout_width="wrap_content"
+                app:tint="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"

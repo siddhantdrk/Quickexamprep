@@ -31,7 +31,7 @@ public class AllExamItemAdapter extends
     // Returns the total count of items in the list
     @Override
     public int getItemCount() {
-        return 9;
+        return 6;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
