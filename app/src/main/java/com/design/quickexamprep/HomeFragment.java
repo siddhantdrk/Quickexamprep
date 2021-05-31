@@ -75,23 +75,17 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.home_tablayout);
-        tabLayout.addTab(tabLayout.newTab().setText("POPULAR EXAMS"));
-        tabLayout.addTab(tabLayout.newTab().setText("ALL EXAMS"));
         final ViewPager2 viewPager = (ViewPager2) view.findViewById(R.id.home_viewpager);
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity());
         viewPager.setAdapter(adapter);
-
+        viewPager.setCurrentItem(2);
         new TabLayoutMediator(tabLayout, viewPager,
-                new TabLayoutMediator.TabConfigurationStrategy() {
-                    @Override
-                    public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                        if (position == 0) {
-                            tab.setText("POPULAR EXAMS");
+                (tab, position) -> {
+                    if (position == 0) {
+                        tab.setText("POPULAR EXAMS");
+                    } else {
+                        tab.setText("ALL EXAMS");
 
-                        } else {
-                            tab.setText("ALL EXAMS");
-
-                        }
                     }
                 }).attach();
 
