@@ -87,7 +87,6 @@ public class HomeFragment extends Fragment {
         final ViewPager2 viewPager = (ViewPager2) view.findViewById(R.id.home_viewpager);
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity());
         viewPager.setAdapter(adapter);
-        viewPager.setCurrentItem(2);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> {
                     if (position == 0) {

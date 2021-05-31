@@ -7,7 +7,7 @@
     android:layout_marginTop="@dimen/dp_10"
     app:cardCornerRadius="4dp"
     app:cardElevation="5dp"
-    app:strokeColor="@color/toolbar_color"
+    app:strokeColor="@color/primary_color"
     app:strokeWidth="0.5dp"
     android:layout_marginStart="@dimen/dp_10">
 

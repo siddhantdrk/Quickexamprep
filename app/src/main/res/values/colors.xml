@@ -8,5 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="status_bar_color">#2B3A8F</color>
-    <color name="toolbar_color">#4F61C5</color>
+    <color name="primary_color">#4F61C5</color>
 </resources>
