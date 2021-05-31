@@ -12,4 +12,9 @@
         android:id="@+id/my_package"
         android:title="@string/my_packages"
         android:icon="@drawable/ic_baseline_self_improvement_24"/>
+
+    <item
+        android:id="@+id/my_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
 </menu>
