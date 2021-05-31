@@ -1,5 +1,6 @@
 package com.design.quickexamprep;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,6 +33,8 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private final ImageListener imageListener = (position, imageView) -> imageView.setImageResource(R.drawable.exam_prep);
 
     public HomeFragment() {
         // Required empty public constructor
@@ -74,6 +79,10 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        CarouselView carouselView = view.findViewById(R.id.home_image_carousel);
+        carouselView.setPageCount(4);
+        carouselView.setImageListener(imageListener);
+
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.home_tablayout);
         final ViewPager2 viewPager = (ViewPager2) view.findViewById(R.id.home_viewpager);
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity());
@@ -89,6 +98,11 @@ public class HomeFragment extends Fragment {
                     }
                 }).attach();
 
+    }
+
+    public String getURLForResource(int resourceId) {
+        //use BuildConfig.APPLICATION_ID instead of R.class.getPackage().getName() if both are not same
+        return Uri.parse("android.resource://" + R.class.getPackage().getName() + "/" + resourceId).toString();
     }
 
     public class ViewPagerAdapter extends FragmentStateAdapter {
