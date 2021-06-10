@@ -7,25 +7,18 @@
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
-    <com.google.android.material.card.MaterialCardView
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/home_image_carousel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_10"
-        app:cardPreventCornerOverlap="false"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp">
+        android:layout_height="180dp"
+        android:layout_margin="10dp"
+        app:fillColor="@color/white"
+        app:indicatorVisibility="visible"
+        app:pageColor="@android:color/transparent"
+        app:radius="4dp"
+        app:slideInterval="3000" />
 
-        <com.synnapps.carouselview.CarouselView
-            android:id="@+id/home_image_carousel"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            app:fillColor="@color/white"
-            app:indicatorVisibility="visible"
-            app:pageColor="@android:color/transparent"
-            app:radius="4dp"
-            app:slideInterval="3000" />
-
-    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/home_tablayout"
@@ -33,8 +26,8 @@
         android:layout_height="wrap_content"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/primary_color"
-        app:tabSelectedTextColor="@color/primary_color"
-        app:tabMode="fixed">
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/primary_color">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
