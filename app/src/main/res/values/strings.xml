@@ -7,4 +7,6 @@
     <string name="home">Home</string>
     <string name="my_tests">My Tests</string>
     <string name="my_packages">My Packages</string>
+    <string name="take_test">Take Test</string>
+    <string name="buy_now">Buy Now</string>
 </resources>
