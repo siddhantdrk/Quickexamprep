@@ -6,6 +6,7 @@
     android:layout_marginStart="@dimen/dp_10"
     android:layout_marginLeft="@dimen/dp_10"
     android:layout_marginEnd="@dimen/dp_10"
+    app:cardElevation="2dp"
     android:layout_marginRight="@dimen/dp_10"
     android:layout_marginBottom="@dimen/dp_10">
 
@@ -20,62 +21,46 @@
             android:layout_height="wrap_content"
             android:text="Phase 1 01"
             android:textSize="18sp"
-            android:textColor="@color/primary_color" />
+            android:textColor="@color/black" />
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/iv_live_icon"
             android:layout_below="@+id/tv_test_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_marginTop="@dimen/dp_10"
-            android:src="@drawable/ic_live"/>
+            android:src="@drawable/ic_live"/>-->
 
         <TextView
             android:layout_marginTop="@dimen/dp_5"
             android:id="@+id/tv_test_marks"
-            android:layout_marginLeft="@dimen/dp_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/iv_live_icon"
             android:layout_below="@+id/tv_test_title"
-            android:text="10 marks"
+            android:text="10 Questions | 10 marks"
             android:textSize="@dimen/sp_12"
-            android:textColor="@color/black"
-            android:layout_toEndOf="@+id/iv_live_icon"
-            android:layout_marginStart="@dimen/dp_10" />
-
-        <TextView
-            android:id="@+id/tv_questions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_test_marks"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:layout_toRightOf="@+id/iv_live_icon"
-            android:text="10 Questions"
-            android:textSize="@dimen/sp_12"
-            android:textColor="@color/black"
-            android:layout_toEndOf="@+id/iv_live_icon"
-            android:layout_marginStart="@dimen/dp_10" />
+            android:textColor="@color/black"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mb_buy_now"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="10sp"
             android:visibility="gone"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:text="@string/buy_now" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="115dp"
+            android:layout_width="100dp"
             android:visibility="gone"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:id="@+id/mb_take_test"
             android:textColor="@color/primary_color"
             app:backgroundTint="@color/white"
-            android:textSize="12sp"
+            android:textSize="10sp"
             app:strokeWidth="1dp"
             app:strokeColor="@color/primary_color"
             android:layout_centerVertical="true"

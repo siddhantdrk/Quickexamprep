@@ -26,12 +26,14 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/testlist_tablayout"
         android:layout_width="match_parent"
+        app:tabBackground="@color/white"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:tabGravity="fill"
         android:layout_below="@+id/iv_testexam_banner"
-        app:tabIndicatorColor="@color/primary_color"
+        app:tabIndicatorColor="@android:color/darker_gray"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/primary_color">
+        app:tabSelectedTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
