@@ -44,19 +44,21 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mb_buy_now"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
-            android:textSize="10sp"
-            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:visibility="visible"
             android:text="@string/buy_now"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:textAllCaps="false"
-            app:backgroundTint="@color/faint_primary_color" />
+            app:backgroundTint="@color/faint_primary_color"
+            app:icon="@drawable/ic_baseline_lock_12" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:visibility="gone"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
@@ -64,7 +66,7 @@
             android:layout_alignParentEnd="true"
             android:text="@string/take_test"
             app:backgroundTint="@color/white"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:strokeWidth="1dp"
             android:textAllCaps="false"
             android:layout_centerVertical="true"

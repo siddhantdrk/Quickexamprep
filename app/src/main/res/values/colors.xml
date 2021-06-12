@@ -11,4 +11,5 @@
     <color name="primary_color">#206499</color>
     <color name="faint_primary_color">#55A3DD</color>
     <color name="grey">#B1B0B0</color>
+    <color name="test_list_theme_color">#184274</color>
 </resources>
