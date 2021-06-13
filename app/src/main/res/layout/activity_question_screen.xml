@@ -201,8 +201,6 @@
                         android:layout_centerVertical="true"
                         android:drawablePadding="@dimen/dp_15"
                         android:text="Applitude"
-                        android:textColor="@color/white" />
-                        android:text="Aptitude"
                         android:textColor="@color/white"
                         app:drawableRightCompat="@drawable/ic_dropdown" />
 
