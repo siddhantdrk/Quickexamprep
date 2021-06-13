@@ -38,14 +38,9 @@ public class TestList extends AppCompatActivity {
                     }
                 }).attach();
 
-        showTestCompleteDialog();
     }
 
-    private void showTestCompleteDialog() {
-        new MaterialAlertDialogBuilder(activity)
-                .setView(LayoutInflater.from(activity)
-                        .inflate(R.layout.exam_completion_popup, null)).show();
-    }
+
 
     public class ViewPagerAdapter extends FragmentStateAdapter {
         private static final int CARD_ITEM_SIZE = 2;
