@@ -4,134 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestScreenActivity">
+    tools:context=".QuestionScreen">
 
-    <LinearLayout
-        android:id="@+id/ll_option1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_questions_option"
+        android:layout_margin="@dimen/dp_15"
         android:layout_below="@+id/tv_question_name"
-        android:gravity="center"
-        android:padding="@dimen/dp_15">
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/circle"
-            android:backgroundTint="@color/faint_primary_color"
-            android:gravity="center"
-            android:text="A"
-            android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/tv_option1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dp_15"
-            android:text="મુઝફ્ફર ખાનને"
-            android:textColor="@color/faint_primary_color" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_option2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_option1"
-        android:gravity="center"
-        android:padding="@dimen/dp_15">
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/cicrlewithoutline"
-            android:gravity="center"
-            android:text="B"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dp_15"
-            android:text="મહંમદ ઘોરીનેે"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_option3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_option2"
-        android:gravity="center"
-        android:padding="@dimen/dp_15">
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/cicrlewithoutline"
-            android:gravity="center"
-            android:text="C"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dp_15"
-            android:text="અલાઉદ્દીન ખિલજીને"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_option4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_option3"
-        android:gravity="center"
-        android:padding="@dimen/dp_15">
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/cicrlewithoutline"
-            android:gravity="center"
-            android:text="D"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dp_15"
-            android:text="અહમદશાહને"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_option5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_option4"
-        android:gravity="center"
-        android:padding="@dimen/dp_15">
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/cicrlewithoutline"
-            android:gravity="center"
-            android:text="E"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dp_15"
-            android:text="Not Attempted"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
+        android:layout_height="wrap_content"/>
 
     <RelativeLayout
         android:id="@+id/rl_test_screen"
@@ -141,6 +21,7 @@
         android:background="@color/primary_color">
 
         <ImageView
+            android:id="@+id/iv_drawer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -151,21 +32,41 @@
             android:src="@drawable/ic_baseline_toc" />
 
         <TextView
+            android:id="@+id/txt_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_15"
-            android:text="Q. 2/16"
+            android:text="Q."
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_currentquestion_no"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/txt_question"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tv_currentquestion_no"
+            android:id="@+id/tv_total_questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="/16"
             android:textColor="@color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="120dp"
             android:layout_height="40dp"
-            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:gravity="center"
             android:text="@string/pause"
+            android:layout_toLeftOf="@+id/iv_drawer"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="12sp"
@@ -202,7 +103,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="Applitude"
-                    android:textColor="@color/white" />
+                    android:drawablePadding="@dimen/dp_15"
+                    android:textColor="@color/white"
+                    app:drawableRightCompat="@drawable/ic_dropdown" />
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickexamprep">
-        <activity android:name=".TestScreenActivity">
-
-        </activity>
-        <activity android:name=".TestList">
+        <activity android:name=".QuestionScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".TestList">
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>
