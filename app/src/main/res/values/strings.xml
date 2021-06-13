@@ -9,4 +9,13 @@
     <string name="my_packages">My Packages</string>
     <string name="take_test">Take Test</string>
     <string name="buy_now">Buy Now</string>
+    <string name="answered">Answered</string>
+    <string name="not_answered">Not Answered</string>
+    <string name="marked">Marked</string>
+    <string name="not_visited">Not Visited</string>
+    <string name="view_result">View Result</string>
+    <string name="submit">Submit</string>
+    <string name="pause">Pause</string>
+    <string name="marked_for_view">Marked for view</string>
+    <string name="clear_selection">Clear selection</string>
 </resources>

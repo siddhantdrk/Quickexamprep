@@ -8,15 +8,18 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class TestList extends AppCompatActivity {
 
     Activity activity = TestList.this;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,14 @@ public class TestList extends AppCompatActivity {
                         tab.setText("PRACTICE TEST");
                     }
                 }).attach();
+
+        showTestCompleteDialog();
+    }
+
+    private void showTestCompleteDialog() {
+        new MaterialAlertDialogBuilder(activity)
+                .setView(LayoutInflater.from(activity)
+                        .inflate(R.layout.exam_completion_popup, null)).show();
     }
 
     public class ViewPagerAdapter extends FragmentStateAdapter {
