@@ -243,29 +243,55 @@
                 android:layout_toRightOf="@id/previous_img"
                 android:orientation="horizontal">
 
-                <com.google.android.material.button.MaterialButton
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_mark_for_review"
                     android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:textSize="12sp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="@dimen/dp_10"
                     android:layout_marginRight="@dimen/dp_10"
-                    android:gravity="center"
-                    android:text="@string/marked_for_view"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:backgroundTint="#EA8D04" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:textSize="12sp"
-                    android:gravity="center"
-                    android:text="@string/clear_selection"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:backgroundTint="#8E8E8E" />
+                    app:cardBackgroundColor="#EA8D04">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="12sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeTextType="uniform"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:text="@string/marked_for_view"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="o" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_clear_selection"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#8E8E8E">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="12sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeTextType="uniform"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:text="@string/clear_selection"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="o" />
+
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
         </RelativeLayout>
