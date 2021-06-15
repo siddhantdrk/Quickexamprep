@@ -75,38 +75,38 @@
             android:id="@+id/iv_answered_indicator1"
             android:layout_width="@dimen/dp_10"
             android:layout_height="@dimen/dp_10"
-            android:layout_above="@id/iv_marked_indicator1"
+            android:layout_alignBottom="@id/txt_not_answered_question"
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginLeft="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_15"
-            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginBottom="4dp"
             android:src="@drawable/circle"
-            app:tint="@color/teal_200" />
+            app:tint="@color/green" />
 
         <ImageView
             android:id="@+id/iv_marked_indicator1"
             android:layout_width="@dimen/dp_15"
             android:layout_height="@dimen/dp_15"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/dp_25"
-            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_alignBottom="@id/txt_marked_question"
+            android:layout_marginStart="23dp"
+            android:layout_marginLeft="23dp"
             android:layout_marginTop="@dimen/dp_15"
-            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginBottom="2dp"
             android:src="@drawable/ic_baseline_bookmark_24" />
 
         <ImageView
             android:id="@+id/iv_not_answered_indicator1"
             android:layout_width="@dimen/dp_10"
             android:layout_height="@dimen/dp_10"
-            android:layout_above="@id/iv_not_visited_indicator1"
+            android:layout_alignBottom="@id/txt_not_answered_question"
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginLeft="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_15"
-            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginBottom="4dp"
             android:layout_toStartOf="@+id/txt_not_answered_question"
             android:layout_toLeftOf="@+id/txt_not_answered_question"
             android:src="@drawable/circle"
-            app:tint="@android:color/darker_gray" />
+            app:tint="@color/question_grey" />
 
         <ImageView
             android:id="@+id/iv_not_visited_indicator1"
@@ -115,7 +115,6 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="@dimen/dp_40"
             android:layout_marginLeft="@dimen/dp_40"
-            android:layout_marginTop="@dimen/dp_15"
             android:layout_marginBottom="@dimen/dp_10"
             android:layout_toStartOf="@+id/txt_not_visited"
             android:layout_toLeftOf="@+id/txt_not_visited"
@@ -184,7 +183,7 @@
             android:id="@+id/txt_answered_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/iv_marked_indicator1"
+            android:layout_alignBottom="@id/txt_not_answered_question"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_10"
@@ -213,6 +212,7 @@
             android:id="@+id/txt_not_answered_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
             android:layout_above="@id/iv_not_visited_indicator1"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
