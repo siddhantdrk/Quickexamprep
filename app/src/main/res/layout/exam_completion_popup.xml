@@ -31,7 +31,7 @@
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/circle"
-                    android:backgroundTint="@color/teal_200"
+                    android:backgroundTint="#029308"
                     android:gravity="center"
                     android:text="1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -44,7 +44,7 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:gravity="center"
                     android:text="@string/answered"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -76,7 +76,7 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:gravity="center"
                     android:text="@string/not_answered"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -107,7 +107,7 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:gravity="center"
                     android:text="@string/marked"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -139,16 +139,18 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:gravity="center"
                     android:text="@string/not_visited"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@color/black" />
             </LinearLayout>
         </RelativeLayout>
 
-        <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_view_result"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@color/primary_color"
             android:layout_below="@+id/rl_answer_completion"
             android:layout_marginTop="@dimen/dp_40"
-            android:background="@color/teal_200"
+            app:cornerRadius="0dp"
             android:gravity="center"
             android:text="@string/view_result"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
