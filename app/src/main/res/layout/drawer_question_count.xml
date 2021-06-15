@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_drawer_question_count"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="@dimen/dp_20"
+    android:layout_marginEnd="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_20"
+    android:background="@drawable/cicrlewithoutline"
+    android:gravity="center"
+    android:text="1"
+    android:textColor="@color/black" />

@@ -7,13 +7,13 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:background="@color/white"
         android:id="@+id/testscreen_drawer"
         android:layout_width="300dp"
-        android:padding="@dimen/dp_15"
         android:layout_height="match_parent"
         android:layout_gravity="right"
-        android:orientation="vertical">
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
 
         <ImageView
             android:id="@+id/iv_up_arrow"
@@ -22,118 +22,239 @@
             android:layout_margin="@dimen/dp_15"
             android:src="@drawable/ic_baseline_keyboard_arrow_up_24" />
 
+        <ImageView
+            android:id="@+id/iv_answered_indicator"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_below="@id/tv_drawer_testname"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_toEndOf="@+id/iv_up_arrow"
+            android:layout_toRightOf="@+id/iv_up_arrow"
+            android:src="@drawable/circle"
+            app:tint="@color/teal_200" />
+
+        <ImageView
+            android:id="@+id/iv_not_answered_indicator"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_below="@id/tv_drawer_testname"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_toEndOf="@+id/tv_answered_question"
+            android:layout_toRightOf="@+id/tv_answered_question"
+            android:src="@drawable/circle"
+            app:tint="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/iv_marked_indicator"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_below="@id/tv_drawer_testname"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_toEndOf="@+id/tv_not_answered_question"
+            android:layout_toRightOf="@+id/tv_not_answered_question"
+            android:src="@drawable/ic_baseline_bookmark_24" />
+
+        <ImageView
+            android:id="@+id/iv_not_visited_indicator"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_below="@id/tv_drawer_testname"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_toEndOf="@+id/tv_marked_question"
+            android:layout_toRightOf="@+id/tv_marked_question"
+            android:src="@drawable/cicrlewithoutline" />
+
+        <ImageView
+            android:id="@+id/iv_answered_indicator1"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_above="@id/iv_marked_indicator1"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:src="@drawable/circle"
+            app:tint="@color/teal_200" />
+
+        <ImageView
+            android:id="@+id/iv_marked_indicator1"
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:src="@drawable/ic_baseline_bookmark_24" />
+
+        <ImageView
+            android:id="@+id/iv_not_answered_indicator1"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_above="@id/iv_not_visited_indicator1"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_toStartOf="@+id/txt_not_answered_question"
+            android:layout_toLeftOf="@+id/txt_not_answered_question"
+            android:src="@drawable/circle"
+            app:tint="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/iv_not_visited_indicator1"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_toStartOf="@+id/txt_not_visited"
+            android:layout_toLeftOf="@+id/txt_not_visited"
+            android:src="@drawable/cicrlewithoutline" />
+
         <TextView
             android:id="@+id/tv_drawer_testname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_up_arrow"
             android:layout_toRightOf="@+id/iv_up_arrow"
             android:text="Aptitude"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_toEndOf="@+id/iv_up_arrow" />
-
-        <ImageView
-            android:id="@+id/iv_answered_indicator"
-            android:layout_marginTop="@dimen/dp_15"
-            android:layout_width="@dimen/dp_10"
-            android:layout_toRightOf="@+id/iv_up_arrow"
-            android:layout_height="@dimen/dp_10"
-            android:layout_below="@id/tv_drawer_testname"
-            android:src="@drawable/circle"
-            app:tint="@color/teal_200"
-            android:layout_toEndOf="@+id/iv_up_arrow" />
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_toRightOf="@+id/iv_answered_indicator"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_below="@id/tv_drawer_testname"
-            android:layout_width="wrap_content"
-            android:text="5"
             android:id="@+id/tv_answered_question"
-            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/iv_answered_indicator"
-            android:layout_marginStart="@dimen/dp_10" />
-
-
-        <ImageView
-            android:id="@+id/iv_not_answered_indicator"
-            android:layout_marginTop="@dimen/dp_15"
-            android:layout_width="@dimen/dp_10"
-            android:layout_toRightOf="@+id/tv_answered_question"
-            android:layout_height="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_25"
             android:layout_below="@id/tv_drawer_testname"
-            android:src="@drawable/circle"
-            app:tint="@android:color/darker_gray"
-            android:layout_toEndOf="@+id/tv_answered_question"
-            android:layout_marginStart="@dimen/dp_25" />
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/iv_answered_indicator"
+            android:layout_toRightOf="@+id/iv_answered_indicator"
+            android:text="5" />
+
 
         <TextView
             android:id="@+id/tv_not_answered_question"
-            android:layout_toRightOf="@+id/iv_not_answered_indicator"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_below="@id/tv_drawer_testname"
             android:layout_width="wrap_content"
-            android:text="0"
-            android:layout_marginLeft="@dimen/dp_10"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/iv_not_answered_indicator"
-            android:layout_marginStart="@dimen/dp_10" />
-
-        <ImageView
-            android:id="@+id/iv_marked_indicator"
-            android:layout_marginTop="@dimen/dp_15"
-            android:layout_width="@dimen/dp_10"
-            android:layout_toRightOf="@+id/tv_not_answered_question"
-            android:layout_height="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_25"
             android:layout_below="@id/tv_drawer_testname"
-            android:src="@drawable/ic_baseline_bookmark_24"
-            android:layout_toEndOf="@+id/tv_not_answered_question"
-            android:layout_marginStart="@dimen/dp_25" />
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/iv_not_answered_indicator"
+            android:layout_toRightOf="@+id/iv_not_answered_indicator"
+            android:text="0" />
 
         <TextView
             android:id="@+id/tv_marked_question"
-            android:layout_toRightOf="@+id/iv_marked_indicator"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_below="@id/tv_drawer_testname"
             android:layout_width="wrap_content"
-            android:text="1"
-            android:layout_marginLeft="@dimen/dp_10"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/iv_marked_indicator"
-            android:layout_marginStart="@dimen/dp_10" />
-
-        <ImageView
-            android:id="@+id/iv_not_visited_indicator"
-            android:layout_marginTop="@dimen/dp_15"
-            android:layout_width="@dimen/dp_10"
-            android:layout_toRightOf="@+id/tv_marked_question"
-            android:layout_height="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_25"
             android:layout_below="@id/tv_drawer_testname"
-            android:src="@drawable/cicrlewithoutline"
-            android:layout_toEndOf="@+id/tv_marked_question"
-            android:layout_marginStart="@dimen/dp_25" />
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/iv_marked_indicator"
+            android:layout_toRightOf="@+id/iv_marked_indicator"
+            android:text="1" />
+
 
         <TextView
-            android:layout_toRightOf="@+id/iv_not_visited_indicator"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_below="@id/tv_drawer_testname"
             android:layout_width="wrap_content"
-            android:text="32"
-            android:layout_marginLeft="@dimen/dp_10"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_drawer_testname"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
             android:layout_toEndOf="@+id/iv_not_visited_indicator"
-            android:layout_marginStart="@dimen/dp_10" />
+            android:layout_toRightOf="@+id/iv_not_visited_indicator"
+            android:text="32" />
+
+        <TextView
+            android:id="@+id/txt_answered_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_marked_indicator1"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toEndOf="@+id/iv_answered_indicator1"
+            android:layout_toRightOf="@+id/iv_answered_indicator"
+            android:text="@string/answered"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_marked_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_toEndOf="@+id/iv_marked_indicator1"
+            android:layout_toRightOf="@+id/iv_marked_indicator1"
+            android:text="@string/marked"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_not_answered_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_not_visited_indicator1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:text="Not Answered"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_not_visited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_45"
+            android:layout_marginRight="@dimen/dp_45"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:text="Not Visited"
+            android:textColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_drawer_question_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_answered_indicator1"
+            android:layout_below="@+id/iv_not_visited_indicator"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15" />
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="visible"
         tools:context=".QuestionScreen">
 
         <RelativeLayout
@@ -279,9 +400,9 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar_testscreen"
-            android:background="@color/primary_color"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_testscreen"

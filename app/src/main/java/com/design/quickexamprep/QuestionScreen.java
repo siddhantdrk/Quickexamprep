@@ -1,14 +1,18 @@
 package com.design.quickexamprep;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +25,7 @@ public class QuestionScreen extends AppCompatActivity {
     Activity activity = QuestionScreen.this;
     DrawerLayout drawer_layout;
     ActionBarDrawerToggle drawerToggle;
+    RecyclerView rv_drawer_question_no;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +60,56 @@ public class QuestionScreen extends AppCompatActivity {
             showTestCompleteDialog();
 
         });
+
+        rv_drawer_question_no = findViewById(R.id.rv_drawer_question_no);
+        DrawerQuestionNo drawerQuestionNo = new DrawerQuestionNo(this);
+        rv_drawer_question_no.setLayoutManager(new GridLayoutManager(this, 5));
+        rv_drawer_question_no.setAdapter(drawerQuestionNo);
+
     }
 
     private void showTestCompleteDialog() {
         new MaterialAlertDialogBuilder(activity)
                 .setView(LayoutInflater.from(activity)
                         .inflate(R.layout.exam_completion_popup, null)).show();
+    }
+
+    class DrawerQuestionNo extends
+            RecyclerView.Adapter<DrawerQuestionNo.ViewHolder> {
+
+        private final Context context;
+
+        DrawerQuestionNo(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        public DrawerQuestionNo.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(context).inflate(R.layout.drawer_question_count, parent, false);
+            return new DrawerQuestionNo.ViewHolder(view);
+        }
+
+        // Involves populating data into the item through holder
+        @Override
+        public void onBindViewHolder(DrawerQuestionNo.ViewHolder holder, int position) {
+
+            ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count))
+                    .setText("" + position);
+        }
+
+        // Returns the total count of items in the list
+        @Override
+        public int getItemCount() {
+            return 35;
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+
+            public ViewHolder(View itemView) {
+
+                super(itemView);
+
+            }
+        }
     }
 }
