@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".InstructionScreen">
 
-    <TextView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/tv_start_test"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        app:backgroundTint="@color/green"
         android:layout_alignParentBottom="true"
         android:background="@color/primary_color"
         android:gravity="center"

@@ -10,14 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickexamprep">
         <activity android:name=".InstructionScreen">
-
-        </activity>
-        <activity android:name=".ResultScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ResultScreen">
         </activity>
         <activity android:name=".QuestionScreen">
 
