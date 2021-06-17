@@ -2,6 +2,7 @@ package com.design.quickexamprep;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -91,8 +93,28 @@ public class QuestionScreen extends AppCompatActivity {
 
         // Involves populating data into the item through holder
         @Override
-        public void onBindViewHolder(DrawerQuestionNo.ViewHolder holder, int position) {
+        public void onBindViewHolder(ViewHolder holder, int position) {
 
+            if (position == 0) {
+                ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count)).setBackground(ContextCompat.getDrawable(context, R.drawable.circle));
+                holder.itemView.findViewById(R.id.iv_question_marked).setVisibility(View.GONE);
+            } else if (position == 1) {
+                ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count)).setBackground(ContextCompat.getDrawable(context, R.drawable.circle));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count)).setBackgroundTintList(context.getResources().getColorStateList(R.color.teal_200));
+                }
+
+                holder.itemView.findViewById(R.id.iv_question_marked).setVisibility(View.GONE);
+            } else if (position == 3) {
+                ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count)).setBackground(ContextCompat.getDrawable(context, R.drawable.circle));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count)).setBackgroundTintList(context.getResources().getColorStateList(R.color.teal_200));
+                }
+                holder.itemView.findViewById(R.id.iv_question_marked).setVisibility(View.VISIBLE);
+            } else {
+                ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count)).setBackgroundResource(R.drawable.cicrlewithoutline);
+                holder.itemView.findViewById(R.id.iv_question_marked).setVisibility(View.GONE);
+            }
             ((TextView) holder.itemView.findViewById(R.id.tv_drawer_question_count))
                     .setText("" + position);
         }

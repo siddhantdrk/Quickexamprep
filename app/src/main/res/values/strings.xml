@@ -18,4 +18,8 @@
     <string name="pause">Pause</string>
     <string name="marked_for_view">Mark for review</string>
     <string name="clear_selection">Clear selection</string>
+    <string name="result">Results</string>
+    <string name="score_card">Score Card</string>
+    <string name="leader_board">Leader Board</string>
+    <string name="start">Start</string>
 </resources>

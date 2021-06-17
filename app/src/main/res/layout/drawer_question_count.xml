@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tv_drawer_question_count"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:layout_marginTop="@dimen/dp_20"
-    android:layout_marginEnd="@dimen/dp_10"
-    android:layout_marginRight="@dimen/dp_20"
-    android:background="@drawable/cicrlewithoutline"
-    android:gravity="center"
-    android:text="1"
-    android:textColor="@color/black" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView android:id="@+id/tv_drawer_question_count"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_20"
+        android:background="@drawable/cicrlewithoutline"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/iv_question_marked"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_height="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_5"
+        android:src="@drawable/ic_baseline_bookmark_24"/>
+</LinearLayout>

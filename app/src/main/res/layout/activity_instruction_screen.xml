@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstructionScreen">
+
+    <TextView
+        android:id="@+id/tv_start_test"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_color"
+        android:gravity="center"
+        android:text="@string/start"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/white" />
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/instruction_toobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        app:title="Aptitude"
+        app:titleTextColor="@color/white" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_start_test"
+        android:layout_below="@id/instruction_toobar"
+        android:layout_margin="@dimen/dp_10">
+
+        <WebView
+            android:id="@+id/instruction_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
