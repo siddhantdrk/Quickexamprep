@@ -6,19 +6,374 @@
     android:layout_height="match_parent"
     tools:context=".ResultScreen">
 
+    <TextView
+        android:id="@+id/txt_overall_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result_toolbar"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/overall_result"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_time_distribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mcv_over_result"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/time_distribution"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
     <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/result_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary_color"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="Aptitude"
+        app:title="@string/result"
         app:titleTextColor="@color/white" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tv_start_test"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_color"
+        android:gravity="center"
+        android:text="@string/view_solution"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green" />
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/white"
-        app:itemTextColor="@color/black"
-        app:menu="@menu/result_bottom_nav_menu" />
+        android:layout_below="@id/txt_time_distribution"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_15"
+        app:cardCornerRadius="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_toLeftOf="@id/ll_time_taken"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_20"
+                android:src="@drawable/ic_baseline_access_time_24"
+                app:tint="@color/primary_color"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_toStartOf="@id/ll_time_taken" />
+
+            <LinearLayout
+                android:id="@+id/ll_time_taken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_time_taken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/time_taken"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 min : 30 sec"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_toLeftOf="@id/ll_correct_ans_time"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_below="@id/ll_time_taken"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_30"
+                android:src="@drawable/ic_baseline_access_time_24"
+                app:tint="@android:color/holo_green_dark"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:layout_toStartOf="@id/ll_time_taken" />
+
+            <LinearLayout
+                android:id="@+id/ll_correct_ans_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_time_taken"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_correct_ans_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Correct Ans Time"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 min : 2 sec"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_time_taken"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#e3e3e3" />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_over_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_overall_result"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_15"
+        app:cardCornerRadius="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_overall_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_overall_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="2.5/200"
+                    android:textColor="#77ab59"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/overall_score"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_nation_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/national_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="6838/8447"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nation_rank"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_besk_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_overall_score"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_best_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="175.0"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/best_score"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_state_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_nation_rank"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_state_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="&amp;?"
+                    android:textColor="@color/teal_200"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state_rank"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_percentile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_besk_score"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_pernctile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="19.06"
+                    android:textColor="@color/faint_primary_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentile"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_average_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_state_rank"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_average_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="32.28"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/average_score"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="#e3e3e3" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="#e3e3e3" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/ll_besk_score"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="#e3e3e3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_overall_score"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#e3e3e3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_besk_score"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#e3e3e3" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
 </RelativeLayout>

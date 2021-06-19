@@ -22,4 +22,14 @@
     <string name="score_card">Score Card</string>
     <string name="leader_board">Leader Board</string>
     <string name="start">Start</string>
+    <string name="overall_result">Overall Result</string>
+    <string name="nation_rank">Nation Rank</string>
+    <string name="overall_score">Overall Score</string>
+    <string name="best_score">Best Score</string>
+    <string name="state_rank">State Rank</string>
+    <string name="percentile">Percentile</string>
+    <string name="average_score">Average Score</string>
+    <string name="time_distribution">Time Distribution</string>
+    <string name="time_taken">Time Taken</string>
+    <string name="view_solution">View Solution</string>
 </resources>
