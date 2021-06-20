@@ -172,12 +172,12 @@
 
             <LinearLayout
                 android:id="@+id/ll_overall_score"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@id/view1"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_20"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_toStartOf="@id/view1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -199,19 +199,20 @@
 
             <LinearLayout
                 android:id="@+id/ll_nation_rank"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/view1"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="@dimen/dp_20"
-                android:layout_marginEnd="@dimen/dp_40"
-                android:layout_marginRight="@dimen/dp_40"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/view1">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/percentile"
+                    android:layout_gravity="center"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -227,15 +228,16 @@
 
             <LinearLayout
                 android:id="@+id/ll_besk_score"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@id/view2"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_overall_score"
-                android:layout_marginStart="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_20"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_toStartOf="@id/view2">
 
                 <TextView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/correct_ans"
@@ -254,17 +256,18 @@
 
             <LinearLayout
                 android:id="@+id/ll_state_rank"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@id/view1"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_nation_rank"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="@dimen/dp_20"
-                android:layout_marginEnd="@dimen/dp_40"
-                android:layout_marginRight="@dimen/dp_40"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/view1">
 
                 <TextView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/wrong_ans"
@@ -282,16 +285,17 @@
 
             <LinearLayout
                 android:id="@+id/ll_percentile"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/view1"
                 android:layout_below="@id/ll_besk_score"
-                android:layout_marginStart="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_20"
                 android:layout_marginBottom="@dimen/dp_10"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_toStartOf="@id/view1">
 
                 <TextView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/postive_marks"
@@ -314,14 +318,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_state_rank"
                 android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/view1"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="@dimen/dp_20"
-                android:layout_marginEnd="@dimen/dp_40"
-                android:layout_marginRight="@dimen/dp_40"
                 android:layout_marginBottom="@dimen/dp_10"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/view1">
 
                 <TextView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/nagtive_marks"
@@ -369,6 +374,7 @@
 
 
             <View
+                android:id="@+id/view2"
                 android:layout_width="1dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_20"
@@ -378,12 +384,14 @@
 
             <View
                 android:layout_width="1dp"
+                android:id="@+id/view1"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_20"
                 android:background="#e3e3e3" />
 
             <View
+                android:id="@+id/view3"
                 android:layout_width="1dp"
                 android:layout_height="@dimen/dp_40"
                 android:layout_below="@id/ll_besk_score"
