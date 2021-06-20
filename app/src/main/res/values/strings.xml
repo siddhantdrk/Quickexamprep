@@ -32,4 +32,10 @@
     <string name="time_distribution">Time Distribution</string>
     <string name="time_taken">Time Taken</string>
     <string name="view_solution">View Solution</string>
+    <string name="score">Score</string>
+    <string name="correct_ans">Correct Ans</string>
+    <string name="wrong_ans">Wrong Ans</string>
+    <string name="postive_marks">Postive Marks</string>
+    <string name="nagtive_marks">Nagtive Marks</string>
+    <string name="unattempted_e">Unattempted[E]</string>
 </resources>

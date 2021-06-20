@@ -42,7 +42,7 @@
         app:titleTextColor="@color/white" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/tv_start_test"
+        android:id="@+id/tv_view_solution"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
@@ -67,15 +67,27 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_toLeftOf="@id/ll_time_taken"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="@dimen/dp_30"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/dp_20"
-                android:src="@drawable/ic_baseline_access_time_24"
-                app:tint="@color/primary_color"
+                android:layout_marginTop="@dimen/dp_30"
                 android:layout_marginEnd="@dimen/dp_20"
-                android:layout_toStartOf="@id/ll_time_taken" />
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_toStartOf="@id/ll_time_taken"
+                android:layout_toLeftOf="@id/ll_time_taken"
+                android:src="@drawable/ic_baseline_access_time_24"
+                app:tint="@color/primary_color" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_time_taken"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_toStartOf="@id/ll_time_taken"
+                android:layout_toLeftOf="@id/ll_correct_ans_time"
+                android:src="@drawable/ic_baseline_access_time_24"
+                app:tint="@android:color/holo_green_dark" />
 
             <LinearLayout
                 android:id="@+id/ll_time_taken"
@@ -101,18 +113,6 @@
                     android:textColor="@color/black"
                     android:textStyle="bold" />
             </LinearLayout>
-
-            <ImageView
-                android:layout_toLeftOf="@id/ll_correct_ans_time"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="@dimen/dp_30"
-                android:layout_below="@id/ll_time_taken"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/dp_30"
-                android:src="@drawable/ic_baseline_access_time_24"
-                app:tint="@android:color/holo_green_dark"
-                android:layout_marginEnd="@dimen/dp_30"
-                android:layout_toStartOf="@id/ll_time_taken" />
 
             <LinearLayout
                 android:id="@+id/ll_correct_ans_time"
@@ -180,6 +180,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
                     android:id="@+id/tv_overall_result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -188,11 +195,6 @@
                     android:textColor="#77ab59"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/overall_score"
-                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -207,19 +209,20 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/national_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentile"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_percentile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="6838/8447"
+                    android:text="2.6"
                     android:textColor="@color/primary_color"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nation_rank"
-                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -233,19 +236,20 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_best_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correct_ans"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_correct_ans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="175.0"
+                    android:text="10"
                     android:textColor="@color/primary_color"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/best_score"
-                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -261,19 +265,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wrong_ans"
+                    android:textColor="@color/black" />
+
+                <TextView
                     android:id="@+id/tv_state_rank"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="&amp;?"
+                    android:text="I"
                     android:textColor="@color/teal_200"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/state_rank"
-                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -288,19 +292,20 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_pernctile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/postive_marks"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_positive_marks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="19.06"
+                    android:text="10.5"
                     android:textColor="@color/faint_primary_color"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/percentile"
-                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -317,26 +322,58 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_average_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nagtive_marks"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_negative_marks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="32.28"
+                    android:text="1.25"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_unattempeted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_average_score"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/average_score"
+                    android:layout_gravity="center"
+                    android:text="@string/unattempted_e"
                     android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_unattempted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
             </LinearLayout>
+
 
             <View
                 android:layout_width="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
                 android:layout_height="40dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="@dimen/dp_45"
+                android:layout_below="@+id/ll_overall_score"
                 android:background="#e3e3e3" />
 
             <View
@@ -348,7 +385,7 @@
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/dp_40"
                 android:layout_below="@id/ll_besk_score"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_20"
@@ -372,6 +409,13 @@
                 android:layout_marginTop="@dimen/dp_10"
                 android:layout_marginRight="@dimen/dp_20"
                 android:background="#e3e3e3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_percentile"
+                android:background="#e3e3e3" />
+
         </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
