@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/cv_question_option"
     android:layout_marginBottom="@dimen/dp_10"
+    app:rippleColor="@android:color/transparent"
     app:strokeColor="@color/faint_primary_color"
     app:strokeWidth="2dp">
 

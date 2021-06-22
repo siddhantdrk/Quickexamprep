@@ -45,6 +45,7 @@ public class SolutionOptionItemAdapter extends
 
         if (position == selectedPosition) {
             holder.cv_question_option.setStrokeColor(ContextCompat.getColor(context, R.color.green));
+            holder.cv_question_option.setCardElevation(0);
             holder.tv_option.setTextColor(ContextCompat.getColor(context, R.color.green));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 holder.tv_option_no.setBackgroundTintList(context.getResources().getColorStateList(R.color.green));
@@ -56,6 +57,7 @@ public class SolutionOptionItemAdapter extends
             holder.cv_question_option.setCardBackgroundColor(context.getResources().getColor(R.color.faint_green_color));
         } else if (position == 3) {
             holder.cv_question_option.setStrokeColor(ContextCompat.getColor(context, R.color.red));
+            holder.cv_question_option.setCardElevation(0);
             holder.tv_option.setTextColor(ContextCompat.getColor(context, R.color.red));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 holder.tv_option_no.setBackgroundTintList(context.getResources().getColorStateList(R.color.red));
