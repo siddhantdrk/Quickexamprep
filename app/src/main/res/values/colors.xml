@@ -10,9 +10,11 @@
     <color name="status_bar_color">#1A4F78</color>
     <color name="primary_color">#206499</color>
     <color name="faint_primary_color">#55A3DD</color>
+    <color name="faint_green_color">#1A029308</color>
     <color name="grey">#B1B0B0</color>
     <color name="test_list_theme_color">#184274</color>
     <color name="green">#029308</color>
+    <color name="faint_red">#1AAF0202</color>
     <color name="red">#AF0202</color>
     <color name="yellow">#EA8D04</color>
     <color name="question_grey">#8E8E8E</color>

@@ -38,4 +38,7 @@
     <string name="postive_marks">Postive Marks</string>
     <string name="nagtive_marks">Nagtive Marks</string>
     <string name="unattempted_e">Unattempted[E]</string>
+    <string name="solution">Solution</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
 </resources>
