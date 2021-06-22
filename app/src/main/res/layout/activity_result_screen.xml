@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/result_toolbar"
+        android:textSize="16sp"
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_15"
@@ -24,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mcv_over_result"
+        android:textSize="16sp"
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_15"
@@ -187,12 +189,12 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tv_overall_result"
+                    android:id="@+id/tv_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="2.5/200"
-                    android:textColor="#77ab59"
+                    android:textColor="@color/primary_color"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -249,7 +251,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="10"
-                    android:textColor="@color/primary_color"
+                    android:textColor="@color/green"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -274,12 +276,12 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/tv_state_rank"
+                    android:id="@+id/tv_wrong_ans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="I"
-                    android:textColor="@color/teal_200"
+                    android:text="1"
+                    android:textColor="@color/red"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -307,7 +309,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="10.5"
-                    android:textColor="@color/faint_primary_color"
+                    android:textColor="@color/green"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -338,7 +340,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="1.25"
-                    android:textColor="@color/black"
+                    android:textColor="@color/red"
                     android:textStyle="bold" />
 
             </LinearLayout>
