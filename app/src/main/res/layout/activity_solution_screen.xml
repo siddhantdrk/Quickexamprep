@@ -6,46 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".QuestionScreen">
 
-    <RelativeLayout
-        android:id="@+id/rl_bottom_"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:background="@color/white"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp_20"
-            android:layout_marginLeft="@dimen/dp_20"
-            android:text="@string/previous"
-            android:textColor="@color/primary_color"
-            app:backgroundTint="@color/white"
-            app:strokeColor="@color/primary_color"
-            app:strokeWidth="1dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/dp_20"
-            android:layout_marginRight="@dimen/dp_20"
-            android:text="@string/next"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/primary_color"
-            app:strokeColor="@color/primary_color"
-            app:strokeWidth="1dp" />
-
-    </RelativeLayout>
 
     <ScrollView
+        android:layout_above="@id/rl_bottom_"
+        android:layout_marginBottom="@dimen/dp_10"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -56,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/appbar_testscreen"
-                android:background="@color/primary_color">
+                android:background="@color/white">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -64,7 +30,8 @@
                     android:layout_below="@+id/tv_exam_name"
                     android:layout_alignParentRight="true"
                     android:padding="@dimen/dp_10"
-                    android:src="@drawable/ic_report" />
+                    android:src="@drawable/ic_report"
+                    app:tint="@color/black" />
 
                 <TextView
                     android:id="@+id/txt_question"
@@ -76,7 +43,7 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginBottom="@dimen/dp_10"
                     android:text="Q."
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <TextView
@@ -88,7 +55,7 @@
                     android:layout_toEndOf="@+id/txt_question"
                     android:layout_toRightOf="@+id/txt_question"
                     android:text="1"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <TextView
@@ -99,7 +66,7 @@
                     android:layout_marginLeft="@dimen/dp_20"
                     android:layout_marginTop="@dimen/dp_10"
                     android:text="Apptitude"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
             </RelativeLayout>
 
@@ -168,4 +135,42 @@
         android:layout_height="1dp"
         android:layout_above="@id/rl_bottom_"
         android:background="#e3e3e3" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="@string/previous"
+            android:textColor="@color/primary_color"
+            app:backgroundTint="@color/white"
+            app:strokeColor="@color/primary_color"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/primary_color"
+            app:strokeColor="@color/primary_color"
+            app:strokeWidth="1dp" />
+
+    </RelativeLayout>
+
 </RelativeLayout>
