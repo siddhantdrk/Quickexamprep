@@ -1,12 +1,13 @@
 package com.design.quickexamprep;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.design.quickexamprep.adapters.SolutionOptionItemAdapter;
 
 import java.util.ArrayList;
 

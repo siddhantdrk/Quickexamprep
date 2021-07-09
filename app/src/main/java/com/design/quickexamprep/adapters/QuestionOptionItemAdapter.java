@@ -1,4 +1,4 @@
-package com.design.quickexamprep;
+package com.design.quickexamprep.adapters;
 
 import android.app.Activity;
 import android.os.Build;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.design.quickexamprep.R;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class QuestionOptionItemAdapter extends
     int selectedPosition = 0;
     ArrayList<String> questions;
 
-    QuestionOptionItemAdapter(Activity context, ArrayList<String> questions) {
+    public QuestionOptionItemAdapter(Activity context, ArrayList<String> questions) {
         this.context = context;
         this.questions = questions;
     }

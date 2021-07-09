@@ -1,4 +1,4 @@
-package com.design.quickexamprep;
+package com.design.quickexamprep.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.design.quickexamprep.R;
+
 public class AllExamItemAdapter extends
         RecyclerView.Adapter<AllExamItemAdapter.ViewHolder> {
 
     private final Context context;
 
-    AllExamItemAdapter(Context context) {
+    public AllExamItemAdapter(Context context) {
         this.context = context;
     }
 

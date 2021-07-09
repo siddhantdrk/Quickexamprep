@@ -1,4 +1,4 @@
-package com.design.quickexamprep;
+package com.design.quickexamprep.adapters;
 
 import android.app.Activity;
 import android.os.Build;
@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.design.quickexamprep.R;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class SolutionOptionItemAdapter extends
     int selectedPosition = 0;
     ArrayList<String> questions;
 
-    SolutionOptionItemAdapter(Activity context, ArrayList<String> questions) {
+    public SolutionOptionItemAdapter(Activity context, ArrayList<String> questions) {
         this.context = context;
         this.questions = questions;
     }
@@ -67,7 +68,7 @@ public class SolutionOptionItemAdapter extends
             holder.iv_question_result.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_clear_red));
             holder.iv_question_result.setVisibility(View.VISIBLE);
             holder.cv_question_option.setCardBackgroundColor(context.getResources().getColor(R.color.faint_red));
-        }else {
+        } else {
             holder.cv_question_option.setStrokeColor(ContextCompat.getColor(context, R.color.white));
             holder.tv_option.setTextColor(ContextCompat.getColor(context, R.color.black));
             holder.tv_option_no.setBackgroundResource(R.drawable.cicrlewithoutline);

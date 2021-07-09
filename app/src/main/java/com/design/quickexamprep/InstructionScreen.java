@@ -1,10 +1,12 @@
 package com.design.quickexamprep;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.design.quickexamprep.adapters.InstructionItemAdapter;
 
 public class InstructionScreen extends AppCompatActivity {
 
@@ -13,18 +15,9 @@ public class InstructionScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruction_screen);
 
-        WebView browser = findViewById(R.id.instruction_webview);
-        browser.loadUrl("https://www.niu.edu/ems/quizfiles/quizInstrs.html");
-        browser.setWebViewClient(new InstructionBrowser());
-
-    }
-
-    private class InstructionBrowser extends WebViewClient {
-
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
+        RecyclerView rv_instructions = findViewById(R.id.rv_instructions);
+        rv_instructions.setLayoutManager(new LinearLayoutManager(InstructionScreen.this));
+        InstructionItemAdapter instructionItemAdapter = new InstructionItemAdapter(InstructionScreen.this);
+        rv_instructions.setAdapter(instructionItemAdapter);
     }
 }

@@ -1,4 +1,4 @@
-package com.design.quickexamprep;
+package com.design.quickexamprep.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.design.quickexamprep.R;
+
 import java.util.ArrayList;
 
 public class TestListAdapter extends
@@ -16,7 +18,7 @@ public class TestListAdapter extends
     private final Context context;
     ArrayList<String> titlelist;
 
-    TestListAdapter(Context context, ArrayList<String> titlelist) {
+    public TestListAdapter(Context context, ArrayList<String> titlelist) {
         this.context = context;
         this.titlelist = titlelist;
     }
@@ -33,10 +35,10 @@ public class TestListAdapter extends
 
         holder.tv_test_title.setText(titlelist.get(position));
 
-        if(position == 0){
+        if (position == 0) {
             holder.itemView.findViewById(R.id.mb_buy_now).setVisibility(View.GONE);
             holder.itemView.findViewById(R.id.mb_take_test).setVisibility(View.VISIBLE);
-        }else{
+        } else {
             holder.itemView.findViewById(R.id.mb_buy_now).setVisibility(View.VISIBLE);
             holder.itemView.findViewById(R.id.mb_take_test).setVisibility(View.GONE);
         }
