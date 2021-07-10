@@ -28,7 +28,7 @@ public class InstructionItemAdapter extends
         instruction.add("જો તમે કોઈ પ્રશ્નનો જવાબ પાછળથી આપવા માગતા હો તો તમે તે પ્રશ્નને mark for");
         instruction.add("Mark for review કરેલા પ્રશ્નો તમને લાલ કલરથી highlighted જોવા મળશે");
         instruction.add("તમે કોઈપણ પ્રશ્ન ઉપર સીધા જઈ શકો છો તેના માટે પ્રશ્ન નંબર ઉપર ક્લિક કરતા તમે તે પ્રશ્ન ઉપર જઈ શકો છો");
-    }
+      }
 
     @Override
     public InstructionItemAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
