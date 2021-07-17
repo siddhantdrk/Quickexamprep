@@ -9,19 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickexamprep">
-        <activity android:name=".MockTest">
+        <activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SolutionScreen"></activity>
-        <activity android:name=".InstructionScreen">
+        <activity android:name=".MockTest">
 
         </activity>
+        <activity android:name=".SolutionScreen" />
+        <activity android:name=".InstructionScreen"></activity>
         <activity android:name=".ResultScreen" />
-        <activity android:name=".QuestionScreen"></activity>
+        <activity android:name=".QuestionScreen" />
         <activity android:name=".TestList" />
         <activity android:name=".MainActivity" />
     </application>

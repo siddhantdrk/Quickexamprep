@@ -47,4 +47,6 @@
     <string name="mark">Mark</string>
     <string name="instructions">Instructions</string>
     <string name="start_test">Start Test</string>
+    <string name="continue_with_google">Continue With Google</string>
+    <string name="by_clicking_i_agree_to_terms_and_service">By clicking, I agree to Terms and Service</string>
 </resources>
