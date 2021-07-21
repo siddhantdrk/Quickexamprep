@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.my_test:
                     setCurrentFragment(new MyTestFragment());
                     break;
+                case R.id.my_profile:
+                    setCurrentFragment(new ProfileFragment());
+                    break;
             }
             return true;
         });

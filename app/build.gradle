@@ -40,4 +40,6 @@ dependencies {
 
     //image Carousel
     implementation 'com.synnapps:carouselview:0.1.4'
+    //circular imageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
