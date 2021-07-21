@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_10"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginEnd="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_10"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_test_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Articles"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!--<ImageView
+            android:id="@+id/iv_live_icon"
+            android:layout_below="@+id/tv_test_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/ic_live"/>-->
+
+        <TextView
+            android:id="@+id/tv_test_marks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_test_title"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="10 Questions | 10 marks"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_view_result"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="View Result"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="@color/white"
+            app:strokeColor="@color/primary_color"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_take_test"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/take_test"
+            android:textAllCaps="false"
+            android:textColor="@color/faint_primary_color"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:backgroundTint="@color/white"
+            app:strokeColor="@color/faint_primary_color"
+            app:strokeWidth="1dp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
